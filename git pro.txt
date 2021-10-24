@@ -1,0 +1,171 @@
+
+EKANT VISAVE@Ekant MINGW64 ~/OneDrive/Desktop/okk
+$ git init
+Initialized empty Git repository in C:/Users/EKANT VISAVE/OneDrive/Desktop/ogit/
+
+EKANT VISAVE@Ekant MINGW64 ~/OneDrive/Desktop/okk (master)
+$ echo "# thisistrial" >> README.md
+
+EKANT VISAVE@Ekant MINGW64 ~/OneDrive/Desktop/okk (master)
+$ git add README.md
+warning: LF will be replaced by CRLF in README.md.
+The file will have its original line endings in your working directory
+
+EKANT VISAVE@Ekant MINGW64 ~/OneDrive/Desktop/okk (master)
+$ git commit -m "first commit"
+[master (root-commit) 6411d7a] first commit
+ 1 file changed, 1 insertion(+)
+ create mode 100644 README.md
+
+EKANT VISAVE@Ekant MINGW64 ~/OneDrive/Desktop/okk (master)
+$ git clone
+fatal: You must specify a repository to clone.
+
+usage: git clone [<options>] [--] <repo> [<dir>]
+
+    -v, --verbose         be more verbose
+    -q, --quiet           be more quiet
+    --progress            force progress reporting
+    --reject-shallow      don't clone shallow repository
+    -n, --no-checkout     don't create a checkout
+    --bare                create a bare repository
+    --mirror              create a mirror repository (implies bare)
+    -l, --local           to clone from a local repository
+    --no-hardlinks        don't use local hardlinks, always copy
+    -s, --shared          setup as shared repository
+    --recurse-submodules[=<pathspec>]
+                          initialize submodules in the clone
+    --recursive ...       alias of --recurse-submodules
+    -j, --jobs <n>        number of submodules cloned in parallel
+    --template <template-directory>
+                          directory from which templates will be used
+    --reference <repo>    reference repository
+    --reference-if-able <repo>
+                          reference repository
+    --dissociate          use --reference only while cloning
+    -o, --origin <name>   use <name> instead of 'origin' to track upstream
+    -b, --branch <branch>
+                          checkout <branch> instead of the remote's HEAD
+    -u, --upload-pack <path>
+                          path to git-upload-pack on the remote
+    --depth <depth>       create a shallow clone of that depth
+    --shallow-since <time>
+                          create a shallow clone since a specific time
+    --shallow-exclude <revision>
+                          deepen history of shallow clone, excluding rev
+    --single-branch       clone only one branch, HEAD or --branch
+    --no-tags             don't clone any tags, and make later fetches not t them
+    --shallow-submodules  any cloned submodules will be shallow
+    --separate-git-dir <gitdir>
+                          separate git dir from working tree
+    -c, --config <key=value>
+                          set config inside the new repository
+    --server-option <server-specific>
+                          option to transmit
+    -4, --ipv4            use IPv4 addresses only
+    -6, --ipv6            use IPv6 addresses only
+    --filter <args>       object filtering
+    --remote-submodules   any cloned submodules will use their remote-trackih
+    --sparse              initialize sparse-checkout file to include only fioot
+
+
+EKANT VISAVE@Ekant MINGW64 ~/OneDrive/Desktop/okk (master)
+$ git clone https://github.com/elvisave/thisistrial.git
+Cloning into 'thisistrial'...
+warning: You appear to have cloned an empty repository.
+
+EKANT VISAVE@Ekant MINGW64 ~/OneDrive/Desktop/okk (master)
+$ git checkout -b 'myb'
+Switched to a new branch 'myb'
+
+EKANT VISAVE@Ekant MINGW64 ~/OneDrive/Desktop/okk (myb)
+$ git add notepadproject.html
+
+EKANT VISAVE@Ekant MINGW64 ~/OneDrive/Desktop/okk (myb)
+$ git add index.css
+
+EKANT VISAVE@Ekant MINGW64 ~/OneDrive/Desktop/okk (myb)
+$ git commit -m 'added'
+[myb f6188b3] added
+ 2 files changed, 91 insertions(+)
+ create mode 100644 index.css
+ create mode 100644 notepadproject.html
+
+EKANT VISAVE@Ekant MINGW64 ~/OneDrive/Desktop/okk (myb)
+$ git remote add origin https://github.com/elvisave/thisistrial.git
+
+EKANT VISAVE@Ekant MINGW64 ~/OneDrive/Desktop/okk (myb)
+$ git push -u origin myb
+Enumerating objects: 7, done.
+Counting objects: 100% (7/7), done.
+Delta compression using up to 8 threads
+Compressing objects: 100% (5/5), done.
+Writing objects: 100% (7/7), 1.52 KiB | 518.00 KiB/s, done.
+Total 7 (delta 0), reused 0 (delta 0), pack-reused 0
+To https://github.com/elvisave/thisistrial.git
+ * [new branch]      myb -> myb
+Branch 'myb' set up to track remote branch 'myb' from 'origin'.
+
+EKANT VISAVE@Ekant MINGW64 ~/OneDrive/Desktop/okk (myb)
+$ git clone
+fatal: You must specify a repository to clone.
+
+usage: git clone [<options>] [--] <repo> [<dir>]
+
+    -v, --verbose         be more verbose
+    -q, --quiet           be more quiet
+    --progress            force progress reporting
+    --reject-shallow      don't clone shallow repository
+    -n, --no-checkout     don't create a checkout
+    --bare                create a bare repository
+    --mirror              create a mirror repository (implies bare)
+    -l, --local           to clone from a local repository
+    --no-hardlinks        don't use local hardlinks, always copy
+    -s, --shared          setup as shared repository
+    --recurse-submodules[=<pathspec>]
+                          initialize submodules in the clone
+    --recursive ...       alias of --recurse-submodules
+    -j, --jobs <n>        number of submodules cloned in parallel
+    --template <template-directory>
+                          directory from which templates will be used
+    --reference <repo>    reference repository
+    --reference-if-able <repo>
+                          reference repository
+    --dissociate          use --reference only while cloning
+    -o, --origin <name>   use <name> instead of 'origin' to track upstream
+    -b, --branch <branch>
+                          checkout <branch> instead of the remote's HEAD
+    -u, --upload-pack <path>
+                          path to git-upload-pack on the remote
+    --depth <depth>       create a shallow clone of that depth
+    --shallow-since <time>
+                          create a shallow clone since a specific time
+    --shallow-exclude <revision>
+                          deepen history of shallow clone, excluding rev
+    --single-branch       clone only one branch, HEAD or --branch
+    --no-tags             don't clone any tags, and make later fetches not t them
+    --shallow-submodules  any cloned submodules will be shallow
+    --separate-git-dir <gitdir>
+                          separate git dir from working tree
+    -c, --config <key=value>
+                          set config inside the new repository
+    --server-option <server-specific>
+                          option to transmit
+    -4, --ipv4            use IPv4 addresses only
+    -6, --ipv6            use IPv6 addresses only
+    --filter <args>       object filtering
+    --remote-submodules   any cloned submodules will use their remote-trackih
+    --sparse              initialize sparse-checkout file to include only fioot
+
+
+EKANT VISAVE@Ekant MINGW64 ~/OneDrive/Desktop/okk (myb)
+$ git clone https://github.com/elvisave/thisistrial.git
+Cloning into 'thisistrial'...
+remote: Enumerating objects: 7, done.
+remote: Counting objects: 100% (7/7), done.
+remote: Compressing objects: 100% (5/5), done.
+remote: Total 7 (delta 0), reused 7 (delta 0), pack-reused 0
+Receiving objects: 100% (7/7), done.
+
+EKANT VISAVE@Ekant MINGW64 ~/OneDrive/Desktop/okk (myb)
+$
