@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html>
+<title>MyNotepad</title>
+<head>
+  <link rel="stylesheet" type="text/css" href="index.css">
+  <script>
+    function textBold()
+	{
+      document.getElementById("txt").style.fontWeight = "bold";
+    }
+    function textUnderline()
+	{
+      document.getElementById("txt").style.textDecoration = "underline";
+    }
+    function textItalic()
+	{
+      document.getElementById("txt").style.fontStyle = "italic";
+    }
+	
+	function insertNewlineAndFocus() 
+	{
+      let textarea = document.getElementById("txt");
+      textarea.value = textarea.value + "\n";
+      textarea.setSelectionRange(textarea.value.length, textarea.value.length);
+      textarea.focus();
+    } 
+	function font_family(fontStyle)
+	{
+      var value = fontStyle.options[fontStyle.selectedIndex].text;
+      document.getElementById("txt").style.fontFamily = value;
+    }
+	function text() 
+	{
+      document.getElementById("txt").value = "Write your text here...";
+    }
+    
+  </script>
+</head>
+<body onload="text()">
+  <form name="notepad" id="notepad">
+    <div>
+      <div>
+        <select style="width:550px" onchange="font_family(this);">
+          <option>Arial</option>
+          <option>Palatino Linotype</option>
+          <option>Brush Script MT</option>
+          <option selected>Copperplate</option>
+          <option>Arial Narrow</option>
+          <option>cursive</option>
+        </select>
+        <input id="bold" type="button" value="B" name="butbold" style="font-weight: bold; width: 26px; height: 24px"
+          size="28" onclick="textBold()">
+        <input id="ic" type="button" value="i" style="width: 25px; font-style: italic; height: 24px" size="30"
+          onclick="textItalic()">
+        <input id="uc" style="width: 26px; height: 24px; text-decoration: underline" type="button" size="8" value="u"
+          name="butund" onclick="textUnderline()">
+        <input id="nc" style="width: 26px; height: 24px;" type="button" size="10" value="n" name="buttn"
+          onclick="insertNewlineAndFocus()">
+      </div>
+      <br>
+      <div class="textstyle">
+        <textarea style="width: 1100px; height: 430px" id="txt" name="output" rows="10" wrap="virtual"
+          cols=48></textarea><br>
+        <div class="btnStyle">
+          <p><input type="reset" value="clear"></p>
+        </div>
+      </div>
+    </div>
+  </form>
+</body>
+
+</html>
